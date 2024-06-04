@@ -281,7 +281,7 @@
 	  ekein = 1.000      ! # New incident particle energy (1 MeV)
       xin=0.0            ! Source position
       yin=0.0
-	  zin = -5.0         !# z-position of new incident particle
+	  zin = -6.0         !# z-position of new incident particle
       uin=0.0            ! Moving along z axis
       vin=0.0
       win=1.0
@@ -857,7 +857,7 @@
 !     -----------------------------------------------------------
 !     Keep track of energy deposition (for conservation purposes)
 !     -----------------------------------------------------------
-      if (iarg .lt. nreg) then !# custom change
+      if (iarg .lt. 5) then !# custom change
         esum(iql+2,irl,iarg+1) = esum(iql+2,irl,iarg+1) + edepwt
         nsum(iql+2,irl,iarg+1) = nsum(iql+2,irl,iarg+1) + 1
 
