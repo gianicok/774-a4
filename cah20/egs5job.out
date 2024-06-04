@@ -1,0 +1,297 @@
+ chard =  0.10000000000000001       0.10000000000000001        0.0000000000000000     
+ PEGS5-call comes next
+
+pegs5 was called
+
+
+ inseed=           1      (seed for generating unique sequences of Ranlux)
+
+ Start ucnaicgv 
+ Call hatch to get cross-section data
+
+ HATCH-call comes next
+
+
+ Quantities associated with each MEDIA:
+
+ CA                      
+      rho=   5.000000     g/cu.cm     rlc=   3.228830     cm
+      ae=  0.5210000     MeV    ue=   10.51100     MeV
+      ap=  0.1000000E-01 MeV    up=   10.00000     MeV
+
+
+ H2O                     
+      rho=   1.000000     g/cu.cm     rlc=   36.08300     cm
+      ae=  0.5120000     MeV    ue=   10.51100     MeV
+      ap=  0.1000000E-02 MeV    up=   10.00000     MeV
+
+ medium(  1)=CA                      ecut=.52100     MeV, pcut=.10000E-01 MeV
+   X-ray information for Z= 20
+   K-X-ray energy in keV
+     3.6920         3.6880         0.0000         4.0130    
+     0.0000         4.0130         0.0000         0.0000    
+     0.0000         0.0000    
+   L-1 X-ray in keV
+    0.41200        0.41200         0.0000         0.0000    
+     0.0000         0.0000         0.0000         0.0000    
+   L-2 X-ray in keV
+    0.35000         0.0000         0.0000         0.0000         0.0000    
+   L-3 X-ray in keV
+     0.0000         0.0000         0.0000         0.0000    
+     0.0000         0.0000         0.0000    
+ medium(  2)=H2O                     ecut=.51200     MeV, pcut=.10000E-02 MeV
+ medium(  3)=vacuum
+
+ Energy/coordinates/direction cosines/etc.
+      e                x              y              z
+ u              v              w         iq    ir   iarg
+
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3   -1
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3    3
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3   -1
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3    3
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3   -1
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3    3
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3   -1
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3    3
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3   -1
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3    3
+   1.000000       0.000000       0.000000      -6.000000    
+   0.000000       0.000000       1.000000        0    3   -1
+ Elapsed Time (sec)=     0.0000    
+
+ Ncount=     10000 (actual cases run)
+ Ncases=     10000 (number of cases requested)
+ TotKE =     10000.     (total KE (MeV) in run)
+
+ Detector length=     7.6200     cm
+ Detector radius=     3.8100     cm
+ Al cover thickness=  0.10     cm
+ Al cover side thickness=  0.10     cm
+ Front gap =  0.50     cm
+ Side gap =  0.50     cm
+
+ Results for      1.0000    MeV photon
+
+ Peak efficiency =  0.000    +-  0.0     %
+ Total efficiency =  0.000    +-  0.0     %
+
+ Pulse height distribution 
+ E (upper-edge --0.2000E-01 MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.4000E-01 MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.6000E-01 MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.8000E-01 MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.1000     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.1200     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.1400     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.1600     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.1800     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.2000     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.2200     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.2400     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.2600     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.2800     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.3000     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.3200     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.3400     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.3600     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.3800     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.4000     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.4200     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.4400     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.4600     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.4800     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.5000     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.5200     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.5400     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.5600     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.5800     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.6000     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.6200     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.6400     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.6600     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.6800     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.7000     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.7200     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.7400     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.7600     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.7800     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.8000     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.8200     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.8400     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.8600     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.8800     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.9000     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.9200     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.9400     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.9600     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge --0.9800     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+ E (upper-edge -- 1.000     MeV )=     0.0000    +-     0.0000     counts/MeV/incident
+
+ Particle spectrum crossing the detector plane
+                              particles/MeV/source photon
+ Upper energy             Gamma                   Electron               Positron
+.20000E-01 MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.40000E-01 MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.60000E-01 MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.80000E-01 MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.10000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.12000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.14000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.16000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.18000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.20000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.22000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.24000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.26000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.28000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.30000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.32000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.34000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.36000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.38000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.40000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.42000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.44000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.46000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.48000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.50000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.52000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.54000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.56000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.58000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.60000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.62000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.64000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.66000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.68000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.70000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.72000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.74000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.76000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.78000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.80000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.82000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.84000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.86000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.88000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.90000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.92000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.94000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.96000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+.98000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+1.0000     MeV--  0.0000    +-  0.0000      0.0000    +-  0.0000      0.0000    +-  0.0000    
+
+
+ ENERGY DEPOSITION SUMMARY FOR PARTICLES WITH IQ=-1
+                                                       IARG
+                   0               1             2              3              4                ROW SUM
+   REGION
+
+      1        0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+      2        0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+      3        0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+
+   COL SUM     0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+
+
+ ENERGY DEPOSITION SUMMARY FOR PARTICLES WITH IQ= 0
+                                                       IARG
+                   0               1             2              3              4                ROW SUM
+   REGION
+
+      1        0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+      2        0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+      3        0.000000       0.000000       0.000000       1.000000       0.000000            1.000000    
+
+   COL SUM     0.000000       0.000000       0.000000       1.000000       0.000000            1.000000    
+
+
+ ENERGY DEPOSITION SUMMARY FOR PARTICLES WITH IQ= 1
+                                                       IARG
+                   0               1             2              3              4                ROW SUM
+   REGION
+
+      1        0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+      2        0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+      3        0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+
+   COL SUM     0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+
+
+ ENERGY DEPOSITION SUMMARY FOR ALL PARTICLES:
+                                                       IARG
+                   0               1             2              3              4                ROW SUM
+   REGION
+
+      1        0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+      2        0.000000       0.000000       0.000000       0.000000       0.000000            0.000000    
+      3        0.000000       0.000000       0.000000       1.000000       0.000000            1.000000    
+
+   COL SUM     0.000000       0.000000       0.000000       1.000000       0.000000            1.000000    
+
+
+ TOTAL FRACTION=   1.000000         NOTE: THIS NUMBER SHOULD BE VERY CLOSE TO UNITY
+
+
+
+
+ SUMMARY OF EVENT COUNT FOR PARTICLES WITH IQ=-1
+                                                       IARG
+                   0               1             2              3              4                ROW SUM
+   REGION
+
+      1                   0              0              0              0              0                   0
+      2                   0              0              0              0              0                   0
+      3                   0              0              0              0              0                   0
+
+   COL SUM                0              0              0              0              0                   0
+
+
+ SUMMARY OF EVENT COUNT FOR PARTICLES WITH IQ= 0
+                                                       IARG
+                   0               1             2              3              4                ROW SUM
+   REGION
+
+      1                   0              0              0              0              0                   0
+      2                   0              0              0              0              0                   0
+      3                   0              0              0          10000              0               10000
+
+   COL SUM                0              0              0          10000              0               10000
+
+
+ SUMMARY OF EVENT COUNT FOR PARTICLES WITH IQ= 1
+                                                       IARG
+                   0               1             2              3              4                ROW SUM
+   REGION
+
+      1                   0              0              0              0              0                   0
+      2                   0              0              0              0              0                   0
+      3                   0              0              0              0              0                   0
+
+   COL SUM                0              0              0              0              0                   0
+
+
+ SUMMARY OF EVENT COUNT FOR ALL PARTICLES:
+                                                       IARG
+                   0               1             2              3              4                ROW SUM
+   REGION
+
+      1                   0              0              0              0              0                   0
+      2                   0              0              0              0              0                   0
+      3                   0              0              0          10000              0               10000
+
+   COL SUM                0              0              0          10000              0               10000
+
+
+ TOTAL NUMBER OF EVENTS=          10000

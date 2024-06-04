@@ -1,0 +1,30 @@
+ Values for subroutine-entry counters:
+
+ iannih =                    0
+ iaphi  =                    0
+ ibhabha=                    0
+ ibrems =                    0
+ icollis=                    0
+ icompt =                    0
+ iedgbin=                    1
+ ieii   =                    0
+ ielectr=                    0
+ ihatch =                    1
+ ihardx =                    0
+ ikauger=                    0
+ ikshell=                    0
+ ikxray =                    0
+ ilauger=                    0
+ ilshell=                    0
+ ilxray =                    0
+ imoller=                    0
+ imscat =                    0
+ ipair  =                    0
+ iphoto =                    0
+ iphoton=                10000
+ iraylei=                    0
+ ishower=                10000
+ iuphi  =                    0
+ itmxs  =                    0
+ noscat =                    0
+ iblock =                    1

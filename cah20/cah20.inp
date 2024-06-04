@@ -1,0 +1,24 @@
+ELEM                                                                            
+ &INP RHO=5,IRAYL=1,IBOUND=1,INCOH=1,ICPROF=-3,IAPRIM=1 /END  
+CA                            CA                                               
+CA                                                                              
+ENER                                                                            
+ &INP AE=0.521,UE=10.511,AP=0.010,UP=10.0 /END                                  
+TEST                                                                            
+ &INP /END                                                                      
+PWLF                                                                            
+ &INP /END  
+DECK                                                                            
+ &INP /END   
+COMP                                                                            
+ &INP NE=2,RHO=1, PZ=2,1, IRAYL=1 /END                                                               
+H2O                           H2O                                             
+H  O                                                                             
+ENER                                                                            
+ &INP AE=0.512,UE=10.511,AP=.001,UP=10.0 /END                                   
+TEST                                                                            
+ &INP /END                                                                       
+PWLF                                                                            
+ &INP /END                                                                      
+DECK                                                                            
+ &INP /END                                                                                                                                    
