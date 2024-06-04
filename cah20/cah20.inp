@@ -22,3 +22,16 @@ PWLF
  &INP /END                                                                      
 DECK                                                                            
  &INP /END                                                                                                                                    
+MIXT                                                                            
+ &INP NE=3,RHO=1.2046E-3,GASP=0.93174,RHOZ=0.75575,0.23143,0.01282, 
+  IAPRIM=1,IRAYL=1/END                                                              
+AIR-AT-NTP                    AIR-GAS                     
+N  O  AR
+ENER       
+ &INP AE=0.521,UE=10.511,AP=0.010,UP=10.0 /END                                                                  
+TEST                                                                            
+ &INP /END                                                                      
+PWLF                                                                            
+ &INP /END                                                                      
+DECK                                                                            
+ &INP /END                                                                                                                                    

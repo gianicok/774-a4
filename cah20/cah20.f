@@ -165,7 +165,7 @@
 !     Define media before calling PEGS5
 !     ---------------------------------
 
-      nmed=2 !# number of materials is 2
+      nmed=3 !# number of materials is 2
       if (nmed.gt.MXMED) then
         write(1,100) nreg,mxreg 
 100     FORMAT(' nmed(=',I12,') must be less than MXMED(=',I12,')' /
@@ -174,8 +174,8 @@
       end if
 
       medarr(1)='CA                      ' !# new materials
-      medarr(2)='H2O                      '
-      !medarr(3)='AIR-AT-NTP              '
+      medarr(2)='H2O                     '
+      medarr(3)='AIR-AT-NTP              '
 
       do j=1,nmed
         do i=1,24
@@ -183,8 +183,9 @@
         end do
       end do  
 
-      chard(1) = 0.1d0  ! # automatic step-size control
-      chard(2) = 0.1d0
+      chard(1) = 7.00  ! # automatic step-size control
+      chard(2) = 2.0d0
+      chard(3) = 0.1d0
 
       write(1,*) 'chard =',(chard(j),j=1,3)
 
@@ -200,8 +201,6 @@
       call pegs5
 !     ==========
 
-      write(1,111)
-111   FORMAT('pegs5 was called'/) !# custom output
 !-----------------------------------------------------------------------
 ! Step 3: Pre-hatch-call-initialization
 !-----------------------------------------------------------------------
@@ -240,15 +239,19 @@
       end if
 
 !   Set medium index for each region
-      med(1)=1      ! # medium one is material 2 (Ca)					
+      med(1)=1      ! # medium one is material 1 (Ca)					
       iedgfl(1)=1   ! 1:Produce fluorescent X-rays
                     ! 0:Fluorescent X-ray is not produced
 
-      med(2)=2      ! # medium two is material 1 (H2O)
-        ! # no X-rays produced! perhaps change later...
-      med(nreg)=0   ! Vacuum region
-      write(6, *) 'nreg:', nreg
-      !stop
+      med(2)=2      ! # medium two is material 2 (H2O)					
+      !iedgfl(2)=1   ! 1:Produce fluorescent X-rays	
+      !              ! 0:Fluorescent X-ray is not produced
+
+      med(3)=3      ! # medium two is material 3 (Air)				
+      !iedgfl(3)=1   ! 1:Produce fluorescent X-rays	
+      !              ! 0:Fluorescent X-ray is not produced
+      		
+      med(nreg)=0   ! Vacuum region		
 
 !     do i=1,nreg
 !       if(i.eq.1) ecut(i)=0.561
@@ -278,8 +281,7 @@
 	  ekein = 1.000      ! # New incident particle energy (1 MeV)
       xin=0.0            ! Source position
       yin=0.0
-      !zin=-5.0
-	  zin = -6.0         !# z-position of new incident particle
+	  zin = -5.0         !# z-position of new incident particle
       uin=0.0            ! Moving along z axis
       vin=0.0
       win=1.0
@@ -488,17 +490,17 @@
 ! ----------------------
 ! Select incident angle # plot to python later...
 ! ---------------------- # changed to isotropic!
-!371       call randomset(rnnow)
-!          zi0=rnnow
-!          call randomset(rnnow)
-!          xi0=2.0*rnnow-1.0
-!          call randomset(rnnow)
-!          yi0=2.0*rnnow-1.0
-!          rr0=dsqrt(xi0*xi0+yi0*yi0+zi0*zi0)
-!          if(rr0.gt.1.0) go to 371
-!          win = zi0/rr0
-!          uin = xi0/rr0
-!          vin = yi0/rr0
+371       call randomset(rnnow)
+          zi0=rnnow
+          call randomset(rnnow)
+          xi0=2.0*rnnow-1.0
+          call randomset(rnnow)
+          yi0=2.0*rnnow-1.0
+          rr0=dsqrt(xi0*xi0+yi0*yi0+zi0*zi0)
+          if(rr0.gt.1.0) go to 371
+          win = zi0/rr0
+          uin = xi0/rr0
+          vin = yi0/rr0
  
           !theta = 0.0
           !phi = 0.0
@@ -548,7 +550,8 @@
           !write(6, *) 'irin:',irin
           !write(6, *) 'wtin:', wtin 
           call shower (iqin,etot,xin,yin,zin,uin,vin,win,irinn,wtin)
-!         ==========================================================
+          
+          !         ==========================================================
 
 !       Added for energy balance tests (SJW)
           if(DABS(eparte + epartd - ekin)/ekin .gt. 1.d-10) then
@@ -557,10 +560,13 @@
      *             ' Deposit = ',F9.5)
           end if
 
+       !write(6, *) 'Checking for Energy, depe:', depe 
+
 !      If some energy is deposited inside detector add pulse-height
 !      and efficiency.
 
           if (depe .gt. 0.D0) then
+            !write(6, *) 'Adding pulse height, depe:', depe
             ie=depe/deltae + 1
             if (ie .gt. 50)  ie = 50
             ph(ie)=ph(ie)+wtin
@@ -851,7 +857,7 @@
 !     -----------------------------------------------------------
 !     Keep track of energy deposition (for conservation purposes)
 !     -----------------------------------------------------------
-      if (iarg .lt. 5) then
+      if (iarg .lt. nreg) then !# custom change
         esum(iql+2,irl,iarg+1) = esum(iql+2,irl,iarg+1) + edepwt
         nsum(iql+2,irl,iarg+1) = nsum(iql+2,irl,iarg+1) + 1
 
@@ -867,8 +873,11 @@
 !     ----------------------------------------------
 !     Score energy deposition inside NaI detector
 !     ----------------------------------------------
+      
+      !write(6,*) 'med(irl):',med(irl)!#
       if (med(irl). eq. 1) then
         depe = depe + edepwt
+        !write(6,*) 'Energy Deposited:',depe
         
 !      ----------------------------------------------------
 !      Score particle information if it enters from outside
