@@ -3,9 +3,9 @@
 
 # But not these files...
 !.gitignore
-!./cah20/cah20.f
-!./cah20/cah20.inp
-!./cah20/cah20.data
+!cah20.f
+!cah20.inp
+!cah20.data
 # etc...
 
 # ...even if they are in subdirectories
