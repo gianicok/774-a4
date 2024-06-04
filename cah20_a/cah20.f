@@ -276,6 +276,7 @@
 !-----------------------------------------------------------------------
 ! Define initial variables for incident particle normally incident
 ! on the slab
+
       iqin=0             ! Incident particle charge - photons
       !ekein=1.253       ! Incident particle kinetic energy
 	  ekein = 1.000      ! # New incident particle energy (1 MeV)
@@ -490,32 +491,26 @@
 ! ----------------------
 ! Select incident angle # plot to python later...
 ! ---------------------- # changed to isotropic!
-371       call randomset(rnnow)
-          zi0=rnnow
-          call randomset(rnnow)
-          xi0=2.0*rnnow-1.0
-          call randomset(rnnow)
-          yi0=2.0*rnnow-1.0
-          rr0=dsqrt(xi0*xi0+yi0*yi0+zi0*zi0)
-          if(rr0.gt.1.0) go to 371
-          win = zi0/rr0
-          uin = xi0/rr0
-          vin = yi0/rr0
- 
-          !theta = 0.0
-          !phi = 0.0
-          !call randomset(rnnow) !# custom implementation of isotropic source
-          !theta=ACOS(2.0*rnnow-1.0)
-          !phi=2.0*3.14*rnnow
-          !uin = SIN(theta)*COS(phi)/rr0
-          !vin = SIN(theta)*SIN(phi)
-          !win = COS(theta)
-
-          !rr0=dsqrt(uin*uin+vin*vin+win*win)
-          !uin = uin/rr0
-          !vin = vin/rr0
-          !win = win/rr0
-          !stop
+!371       call randomset(rnnow)
+!          zi0=rnnow
+!          call randomset(rnnow)
+!          xi0=2.0*rnnow-1.0
+!          call randomset(rnnow)
+!          yi0=2.0*rnnow-1.0
+!          rr0=dsqrt(xi0*xi0+yi0*yi0+zi0*zi0)
+!          if(rr0.gt.1.0) go to 371
+!          win = zi0/rr0
+!          uin = xi0/rr0
+!          vin = yi0/rr0    
+  
+          call randomset(rnnow) !# custom implementation of isotropic source
+          uin = SIN(ACOS(2.0*rnnow-1.0))*COS(2.0*3.14*rnnow)
+          vin = SIN(ACOS(2.0*rnnow-1.0))*SIN(2.0*3.14*rnnow)
+          win = COS(ACOS(2.0*rnnow-1.0))
+          rr0=dsqrt(uin*uin+vin*vin+win*win)
+          uin = uin/rr0
+          vin = vin/rr0
+          win = win/rr0
 
 !       ------------------------------------
 !       Get source region from cg input data
