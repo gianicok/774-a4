@@ -112,7 +112,7 @@
 
 !**** real*8                                                 ! Arguments
       real*8 totke
-      real*8 rnnow,etot
+      real*8 rnnow,etot,rn1,rn2 !# custom random vars
       real*8 esumt
       
       real*8                                           ! Local variables
@@ -146,6 +146,7 @@
 !     after getcg etc. Unit for pict must be 39.
 !----------------------------------------------------------------
 
+      open(3,FILE='trajectories.out',STATUS='unknown')
       open(1,FILE='egs5job.out',STATUS='unknown')
       open(UNIT= 4,FILE='egs5job.inp',STATUS='old')
       open(39,FILE='egs5job.pic',STATUS='unknown')
@@ -490,33 +491,13 @@
 ! ----------------------
 ! Select incident angle # plot to python later...
 ! ---------------------- # changed to isotropic!
-371       call randomset(rnnow)
-          zi0=rnnow
-          call randomset(rnnow)
-          xi0=2.0*rnnow-1.0
-          call randomset(rnnow)
-          yi0=2.0*rnnow-1.0
-          rr0=dsqrt(xi0*xi0+yi0*yi0+zi0*zi0)
-          if(rr0.gt.1.0) go to 371
-          win = zi0/rr0
-          uin = xi0/rr0
-          vin = yi0/rr0
- 
-          !theta = 0.0
-          !phi = 0.0
-          !call randomset(rnnow) !# custom implementation of isotropic source
-          !theta=ACOS(2.0*rnnow-1.0)
-          !phi=2.0*3.14*rnnow
-          !uin = SIN(theta)*COS(phi)/rr0
-          !vin = SIN(theta)*SIN(phi)
-          !win = COS(theta)
 
-          !rr0=dsqrt(uin*uin+vin*vin+win*win)
-          !uin = uin/rr0
-          !vin = vin/rr0
-          !win = win/rr0
-          !stop
-
+          ! theta now sampled from zero to pi/2   
+          call random_number(rn1)  ! Generate a random number between 0 and 1
+          call random_number(rn2)  ! Generate another random number between 0 and 1
+          uin = SIN(ACOS(1.0-rn1))*COS(2.0*3.14*rn2)
+          vin = SIN(ACOS(1.0-rn1))*SIN(2.0*3.14*rn2)
+          win = COS(ACOS(1.0-rn1))
 !       ------------------------------------
 !       Get source region from cg input data
 !       ------------------------------------
@@ -543,14 +524,13 @@
           !write(6, *) 'xin:',  xin  
           !write(6, *) 'yin:',  yin  
           !write(6, *) 'zin:',  zin  
-          !write(6, *) 'uin:',  uin  
-          !write(6, *) 'vin:',  vin  
-          !write(6, *) 'win:',  win  
+          !write(4, *) 'uin,vin,win',  uin,vin,win      
           !write(6, *) 'irinn:',irinn
           !write(6, *) 'irin:',irin
           !write(6, *) 'wtin:', wtin 
           call shower (iqin,etot,xin,yin,zin,uin,vin,win,irinn,wtin)
           
+          write(3, *) 'uin,vin,win=',uin,vin,win
           !         ==========================================================
 
 !       Added for energy balance tests (SJW)
@@ -580,6 +560,8 @@
                                                ! -----------------------
         end do                                 ! End of CALL SHOWER loop
                                                ! -----------------------
+
+        close(3,status='keep')
 
 !  Calculate average value for this BATCH
         do ie=1,50

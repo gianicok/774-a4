@@ -112,7 +112,7 @@
 
 !**** real*8                                                 ! Arguments
       real*8 totke
-      real*8 rnnow,etot
+      real*8 rnnow,etot,rn1,rn2
       real*8 esumt
       
       real*8                                           ! Local variables
@@ -145,7 +145,7 @@
 !     to use as output file. If they are used, they must be opened
 !     after getcg etc. Unit for pict must be 39.
 !----------------------------------------------------------------
-
+      open(3,FILE='trajectories.out',STATUS='unknown')
       open(1,FILE='egs5job.out',STATUS='unknown')
       open(UNIT= 4,FILE='egs5job.inp',STATUS='old')
       open(39,FILE='egs5job.pic',STATUS='unknown')
@@ -503,14 +503,15 @@
 !          uin = xi0/rr0
 !          vin = yi0/rr0    
   
-          call randomset(rnnow) !# custom implementation of isotropic source
-          uin = SIN(ACOS(2.0*rnnow-1.0))*COS(2.0*3.14*rnnow)
-          vin = SIN(ACOS(2.0*rnnow-1.0))*SIN(2.0*3.14*rnnow)
-          win = COS(ACOS(2.0*rnnow-1.0))
-          rr0=dsqrt(uin*uin+vin*vin+win*win)
-          uin = uin/rr0
-          vin = vin/rr0
-          win = win/rr0
+          call random_number(rn1)  ! Generate a random number between 0 and 1
+          call random_number(rn2)  ! Generate another random number between 0 and 1
+          uin = SIN(ACOS(2.0*rn1-1.0))*COS(2.0*3.14*rn2)
+          vin = SIN(ACOS(2.0*rn1-1.0))*SIN(2.0*3.14*rn2)
+          win = COS(ACOS(2.0*rn1-1.0))
+          !rr0=dsqrt(uin*uin+vin*vin+win*win)
+          !uin = uin/rr0
+          !vin = vin/rr0
+          !win = win/rr0
 
 !       ------------------------------------
 !       Get source region from cg input data
@@ -544,6 +545,7 @@
           !write(6, *) 'irinn:',irinn
           !write(6, *) 'irin:',irin
           !write(6, *) 'wtin:', wtin 
+          write(3, *) 'uin,vin,win=',uin,vin,win
           call shower (iqin,etot,xin,yin,zin,uin,vin,win,irinn,wtin)
           
           !         ==========================================================
@@ -574,7 +576,8 @@
 
                                                ! -----------------------
         end do                                 ! End of CALL SHOWER loop
-                                               ! -----------------------
+                        
+        close(3,status='keep')                       ! -----------------------
 
 !  Calculate average value for this BATCH
         do ie=1,50
